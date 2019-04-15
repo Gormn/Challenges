@@ -2,6 +2,7 @@
 
 import sys
 
+
 T = input()
 dict = {}
 
