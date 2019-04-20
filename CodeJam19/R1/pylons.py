@@ -8,7 +8,6 @@ steps = {}
 possibility= ''
 possible = 'POSSIBLE'
 impossible = 'IMPOSSIBLE'
-grid = []
 route = []
 validroute = []
 
@@ -42,15 +41,16 @@ def checkAgainst(gridly, r, c):
 
 for x in xrange(T):
     R, C = map(int, raw_input().split())
-    
+    grid = []
     for r in xrange(1, R+1):
         for c in xrange(1, C+1):
             grid.append(tuple((r, c)))
+            
     
     routegrid = list(grid)
 
     for r, c in grid:
-        routegrid = list(grid)
+
         print r, routegrid
         checkAgainst(list(routegrid), r, c)
         print 'possibility: ', possibility
