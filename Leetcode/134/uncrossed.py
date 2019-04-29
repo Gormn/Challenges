@@ -1,28 +1,28 @@
 # Java real solution - using Dynamic Programming Longest Common Subsequence.
 
-class Solution {
-    public int maxUncrossedLines(int[] A, int[] B) {
-        int m = A.length;
-        int n = B.length;
-        int[][] dp = new int[m+1][n+1];
+# class Solution {
+#     public int maxUncrossedLines(int[] A, int[] B) {
+#         int m = A.length;
+#         int n = B.length;
+#         int[][] dp = new int[m+1][n+1];
         
-        for (int i = 1; i< m+1; i++){
-            for (int j = 1; j < n+1; j++){
+#         for (int i = 1; i< m+1; i++){
+#             for (int j = 1; j < n+1; j++){
 
-                if(A[i-1] == B[j-1]){
-                    dp[i][j] = 1 + dp[i-1][j-1];
-                   // System.out.println("match" + dp[i][j]); 
-                }
-                else{
-                    dp[i][j] = Math.max(dp[i-1][j], dp[i][j-1]);
-                    // System.out.println(dp[i][j]); 
-                }
-            }
-        }
-        return dp[m][n];
+#                 if(A[i-1] == B[j-1]){
+#                     dp[i][j] = 1 + dp[i-1][j-1];
+#                    // System.out.println("match" + dp[i][j]); 
+#                 }
+#                 else{
+#                     dp[i][j] = Math.max(dp[i-1][j], dp[i][j-1]);
+#                     // System.out.println(dp[i][j]); 
+#                 }
+#             }
+#         }
+#         return dp[m][n];
     
-    }
-}
+#     }
+# }
 
 
 # Python fail at literal solution. Can't try every order, no mathematical shortcut that I know.
