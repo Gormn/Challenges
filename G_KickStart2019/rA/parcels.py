@@ -29,3 +29,6 @@ for x in xrange(T):
 for case, total in yes.iteritems():
     print "Case #{}: {}".format(case, total)
     sys.stdout.flush()
+
+
+
