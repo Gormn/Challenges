@@ -32,7 +32,7 @@ for x in range(T):
             for end in ends[endIndex:]:
                 if end < target:
                     endIndex += 1
-                    skip +=1
+
                 elif end >= target:
                     break
         else: 
@@ -51,3 +51,24 @@ for x in range(T):
 for case, deployments in dict.items():
     print("Case #{}:".format(case) , deployments)  
     sys.stdout.flush()
+
+
+    #boboquack answer
+    # cases=int(input())
+    # for case in range(1,cases+1):
+    #     n,k=map(int,input().split())
+    #     l=[list(map(int,input().split())) for i in range(n)]
+    #     l.sort()
+    #     r=0
+    #     t=0
+    #     for s,e in l:
+    #         if t>=e:continue
+    #         if t<=s:
+    #             d=(e-s+k-1)//k
+    #             r+=d
+    #             t=s+d*k
+    #         else:
+    #             d=(e-t+k-1)//k
+    #             r+=d
+    #             t+=d*k
+    #     print('Case #',case,': ',r,sep='')

@@ -14,8 +14,8 @@ for x in range(T):
     N, X = map(int, input().split())
     amounts = list(map(int, input().split()))
     order = []
-    forDeletion = []
-    deleted = 0
+    # forDeletion = []
+    # deleted = 0
 
 
     # while len(peopleLeft) > 0:
@@ -44,3 +44,12 @@ for x in range(T):
 for case, orderList in dict.items():
     print("Case #{}:".format(case) , *orderList)  
     sys.stdout.flush()
+
+    #boboquack answer:
+    # cases=int(input())
+    # for case in range(1,cases+1):
+    #     n,x=map(int,input().split())
+    #     k=list(map(int,input().split()))
+    #     l=[[(k[i]+x-1)//x,i+1] for i in range(n)]
+    #     l.sort()
+    #     print('Case #'+str(case)+':',*(i[1] for i in l))
